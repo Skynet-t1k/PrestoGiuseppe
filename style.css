@@ -1,0 +1,35 @@
+:root {
+    --ElectricBlue: rgb(0, 123, 255);
+    --VibrantOrange: rgb(255, 87, 34);
+    --OptimisticYellow: rgb(255, 235, 59);
+    --BalancedGreen: rgb(76, 175, 80);
+    --SlateGray: rgb(55, 71, 79);
+}
+
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 300 to 800 */
+
+* {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+/* <uniquifier>: Use a unique and descriptive class name
+<weight>: Use a value from 100 to 900 */
+
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    background-color: var(--SlateGray);
+}
+
+
