@@ -12,10 +12,10 @@
 * {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  /* font-variation-settings:
+    "wdth" 100; */
 }
 
 /* <uniquifier>: Use a unique and descriptive class name
@@ -24,7 +24,7 @@
 h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -32,4 +32,48 @@ body {
     background-color: var(--SlateGray);
 }
 
+.bg-grey{
+  background-color: var(--SlateGray) !important;
+}
 
+.bg-yellow{
+  background-color: var(--OptimisticYellow) !important;
+}
+
+
+/* navbar */
+.nav-link{
+  color:var(--ElectricBlue);
+  font-size: 1.8rem;
+  margin-left: 20px;
+  transition: 0.5s;
+}
+
+.nav-link:hover{
+  color:var(--VibrantOrange);
+  /* text-shadow: 2px 2px 4px var(--BalancedGreen); */
+  font-size: 2rem;
+  transition: 0.5s;
+}
+
+.active{
+  color: var(--VibrantOrange) !important; 
+  font-weight: bold;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+/* header */
+.bg-image{
+  background-image: url(./media/blueDragon.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.h75 {
+  height: 75vh;
+}
