@@ -12,7 +12,7 @@
 * {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   /* font-variation-settings:
     "wdth" 100; */
@@ -40,20 +40,44 @@ body {
   background-color: var(--OptimisticYellow) !important;
 }
 
+.bg-yellowt {
+  background-color: rgba(255, 235, 59, 0.7);
+}
+
+.text-o {
+  color: var(--VibrantOrange) !important;
+}
+
+.text-b {
+  color: var(--ElectricBlue) !important;
+}
+
+.text-y{
+  color: var(--OptimisticYellow);
+}
+
+.text-g{
+  color: var(--BalancedGreen);
+}
 
 /* navbar */
 .nav-link{
   color:var(--ElectricBlue);
   font-size: 1.8rem;
-  margin-left: 20px;
+  margin-left: 50px;
   transition: 0.5s;
+}
+
+.navbar {
+  background-color: rgba(55, 71, 79, 0.86) !important;
+  
 }
 
 .nav-link:hover{
   color:var(--VibrantOrange);
-  /* text-shadow: 2px 2px 4px var(--BalancedGreen); */
-  font-size: 2rem;
+  font-weight: bold;
   transition: 0.5s;
+  
 }
 
 .active{
@@ -68,12 +92,117 @@ body {
 
 /* header */
 .bg-image{
-  background-image: url(./media/blueDragon.jpg);
-  background-repeat: repeat;
+  width: 100%;
+  background-image: url(./media/DragonFaceCenter.jpg);
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  
 }
 
-.h75 {
-  height: 75vh;
+.h100 {
+  height: 100vh;
+}
+
+h1 {
+  font-size: 5rem;
+  background-color: rgba(55, 71, 79, 0.86);
+  padding: 20px;
+  border-radius: 40px;
+  margin-top: 200px;
+  color: var(--VibrantOrange);
+  letter-spacing: 10px;
+}
+
+.bubblespeech{
+  margin-top: 400px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.transparent-img{
+  opacity: 0.65;
+}
+
+.centered-p {
+  position: absolute;
+  top: 42%;
+  left: 35%;
+  color: var(--VibrantOrange);
+  font-size: 1.5rem;
+}
+
+/* cards */
+
+.card{
+  border: 2px solid var(--VibrantOrange);
+  height: 500px;
+  width: 400px;
+  padding:0px;
+  transition: 0.5s;
+
+}
+
+.card:hover{
+  transform: scale(1.15);
+  transition: 0.5s;
+  z-index: 4;
+}
+
+.positioned {
+  position: relative;
+  top:-80px;
+  display: flex;
+  justify-content: center;
+}
+
+.littlebt {
+  width: 100%;
+}
+
+.increment{
+  font-size: 2rem;
+}
+
+.thinker{
+  border-radius: 50px;
+}
+
+
+
+
+
+
+@keyframes burning-effect {
+  0%, 100% {
+    opacity: 1;
+    filter: brightness(100%) contrast(100%);
+}
+50% {
+    opacity: 0.6;
+    filter: brightness(200%) contrast(150%) drop-shadow(0 0 10px red);
+}
+}
+
+@media only screen and (max-width: 991px) {
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 50px;
+  }
+  
+  .nav-link {
+  font-size: 1.2rem;
+  margin-left: 0px;
+  }
+
+  .positioned {
+    position: relative;
+    top:0px;
+    padding:0px;
+  }
+  .card:hover{
+    transform: none;
+  }
 }
