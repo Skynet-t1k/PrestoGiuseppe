@@ -170,6 +170,25 @@ h1 {
   border-radius: 50px;
 }
 
+/* SWIPER */
+.swiper {
+  width: 600px;
+  height: 600px;
+}
+
+.recensioni{
+  height: 300px;
+  width: 500px;
+  border: 2px solid var(--VibrantOrange);
+  border-radius: 20px;
+}
+
+.swiper-slide{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 
 
