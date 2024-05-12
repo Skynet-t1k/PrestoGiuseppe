@@ -51,9 +51,9 @@ recensioni.forEach((recensione)=>{
     let div = document.createElement('div');
     div.classList.add('swiper-slide')
     div.innerHTML = ` <div class="recensioni">
-    <p class="text-center">${recensione.description}</p>
+    <p class="text-center lead">${recensione.description}</p>
     <p class="h4 text-center">${recensione.user}</p>
-    <div class="star text-center"></div>
+    <div class="star text-center text-y"></div>
     </div>`
     swiperWrapper.appendChild(div);
 });

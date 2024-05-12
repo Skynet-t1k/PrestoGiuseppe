@@ -30,7 +30,7 @@
     <!-- navbar -->
     <!-- background header in trasparenza sotto la navbar -->
     <div class="bg-image h100">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
         <div class="container-fluid">
           <img src="./media/LogoBlue.png" alt="logo" class="logo" />
           <button
@@ -50,10 +50,10 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Annunci</a>
+                <a class="nav-link" href="./annunci.html">Annunci</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Chi siamo</a>
+                <a class="nav-link" href="./aboutus.html">Chi siamo</a>
               </li>
             </ul>
           </div>
@@ -65,25 +65,26 @@
       <!-- header -->
       <header>
         <div class="container-fluid d-flex justify-content-center">
-          <h1 class="text-center">PRESTO</h1>
+          <h1 class="text-center shadow h1-index">PRESTO</h1>
         </div>
         <div class="container-fluid d-flex justify-content-center bubblespeech">
-          <div class="image-container">
-            <img
-              src="./media/bubblespeechtransparent.png"
+          <button class="transparent-btn">
+            <!-- <img
+              src="./media/bubblespeechtransparent_ok.png"
               alt=""
               class="img-fluid transparent-img"
-            />
-            <p class="centered-p">Click Me!</p>
-          </div>
-          <div class="image-container">
-            <img
-              src="./media/bubblespeechtransparent.png"
+            /> -->
+            Click Here!
+          </button>
+
+          <button class="transparent-btn">
+            <!-- <img
+              src="./media/bubblespeechtransparent_ok.png"
               alt=""
               class="img-fluid transparent-img"
-            />
-            <p class="centered-p">Click Me!</p>
-          </div>
+            /> -->
+            Click Here!
+          </button>
         </div>
       </header>
     </div>
@@ -92,8 +93,8 @@
     <!-- Section cards-->
     <div class="container-fluid positioned">
       <div class="row align-items-center justify-content-center littlebt">
-        <div class="card col-12 col-lg-4 text-center">
-          <div class="card-body bg-grey">
+        <div class="card card-index col-12 col-lg-4 text-center">
+          <div class="card-body bg-grey shadow">
             <h4 class="card-title text-o">Offerta del Giorno</h4>
             <p class="card-text text-b">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ea
@@ -110,8 +111,8 @@
             </p>
           </div>
         </div>
-        <div class="card col-12 col-lg-4 text-center mx-lg-5 my-2">
-          <div class="card-body bg-grey">
+        <div class="card card-index col-12 col-lg-4 text-center mx-lg-5 my-2">
+          <div class="card-body bg-grey shadow">
             <h4 class="card-title text-o">Sottocosto!!</h4>
             <p class="card-text text-b">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quasi
@@ -128,8 +129,8 @@
             </p>
           </div>
         </div>
-        <div class="card col-12 col-lg-4 text-center">
-          <div class="card-body bg-grey">
+        <div class="card card-index col-12 col-lg-4 text-center">
+          <div class="card-body bg-grey shadow">
             <h4 class="card-title text-o">In Evidenza</h4>
             <p class="card-text text-b">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
@@ -156,7 +157,11 @@
     <div class="container mt-2">
       <div class="row">
         <div class="col-12 col-lg-6">
-          <img src="./media/blueDragon.jpg" alt="" class="img-fluid thinker" />
+          <img
+            src="./media/blueDragon.jpg"
+            alt=""
+            class="img-fluid thinker shadow"
+          />
         </div>
         <div class="col-12 col-lg-6 mt-2">
           <h3 class="text-center text-o">Un po' di numeri</h3>
@@ -177,7 +182,7 @@
     <!-- Section Incrementali End-->
 
     <!-- Swiper -->
-    <div class="container">
+    <div class="container mt-lg-5">
       <div class="row justify-content-center">
         <div class="col-12">
           <!-- Slider main container -->

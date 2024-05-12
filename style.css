@@ -92,6 +92,8 @@ body {
 
 /* header */
 .bg-image{
+  position: relative;
+  height: 100%;
   width: 100%;
   background-image: url(./media/DragonFaceCenter.jpg);
   background-repeat: no-repeat;
@@ -104,7 +106,7 @@ body {
   height: 100vh;
 }
 
-h1 {
+.h1-index {
   font-size: 5rem;
   background-color: rgba(55, 71, 79, 0.86);
   padding: 20px;
@@ -115,15 +117,34 @@ h1 {
 }
 
 .bubblespeech{
-  margin-top: 400px;
+  position: absolute;
+  top: 80%;
+  left: 0%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.image-container {
-  position: relative;
+
+.transparent-btn{
+  cursor: pointer;
+  height: 100px;
+  width: 200px; 
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: 2px solid var(--VibrantOrange);
+  border-radius: 20px;
+  background: none;
+  color: var(--VibrantOrange);
+  margin-left: 40px;
+  margin-right: 40px;
+
 }
 
 .transparent-img{
   opacity: 0.65;
+  
 }
 
 .centered-p {
@@ -136,7 +157,7 @@ h1 {
 
 /* cards */
 
-.card{
+.card-index{
   border: 2px solid var(--VibrantOrange);
   height: 500px;
   width: 400px;
@@ -145,7 +166,7 @@ h1 {
 
 }
 
-.card:hover{
+.card-index:hover{
   transform: scale(1.15);
   transition: 0.5s;
   z-index: 4;
@@ -173,14 +194,18 @@ h1 {
 /* SWIPER */
 .swiper {
   width: 600px;
-  height: 600px;
+  height: 500px;
 }
 
 .recensioni{
-  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   width: 500px;
-  border: 2px solid var(--VibrantOrange);
+  height: 400px;
+  border: 3px solid var(--VibrantOrange);
   border-radius: 20px;
+  color: var(--VibrantOrange);
 }
 
 .swiper-slide{
@@ -189,9 +214,38 @@ h1 {
   justify-content: center;
 }
 
+/* annunci */
+.accordion-button{
+  background-color: var(--SlateGray);
+  color: var(--VibrantOrange);
+}
 
+.accordion-button:not(.collapsed){
+  background-color: var(--SlateGray);
+  color: var(--VibrantOrange);
+}
 
+.accordion-body{
+  background-color: var(--SlateGray);
+  color: var(--OptimisticYellow);
+}
 
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff5722'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.card-annunci {
+  width: 18rem;
+  background-color: var(--BalancedGreen);
+  padding: 5px;
+}
+
+.h1-annunci {
+  font-size: 5rem;
+  color: var(--VibrantOrange);
+  letter-spacing: 10px;
+  
+}
 
 
 @keyframes burning-effect {
