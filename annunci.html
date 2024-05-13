@@ -64,8 +64,8 @@
     <h1 class="h1-annunci text-center my-5">Pagina degli annunici</h1>
 
     <div class="container">
-      <div class="row justify-content-between">
-        <div class="col-12 col-lg-3 h100 sticky-top">
+      <div class="row">
+        <div class="col-12 col-lg-3 h-100 sticky-top">
           <h3 class="text-center text-o mb-4">Filtra per</h3>
           <!--Accordion -->
           <div class="accordion" id="accordionPanelsStayOpenExample">
@@ -93,9 +93,10 @@
                       class="form-check-input"
                       type="radio"
                       name="flexRadioDefault"
-                      id="flexRadioDefault1"
+                      id="all"
+                      checked
                     />
-                    <label class="form-check-label" for="flexRadioDefault1">
+                    <label class="form-check-label" for="all">
                       Tutte le categorie
                     </label>
                   </div>
@@ -120,7 +121,18 @@
                 id="panelsStayOpen-collapseTwo"
                 class="accordion-collapse collapse show"
               >
-                <div class="accordion-body">content</div>
+                <div class="accordion-body">
+                  <input
+                    type="range"
+                    min="0"
+                    name="inputPrezzo"
+                    value="500"
+                    max="1000"
+                    class="w-100"
+                    id="inputPrezzo"
+                  />
+                  <p id="displayPrice"></p>
+                </div>
               </div>
             </div>
             <div class="accordion-item">
@@ -140,11 +152,15 @@
                 id="panelsStayOpen-collapseThree"
                 class="accordion-collapse collapse show"
               >
-                <div class="accordion-body">content</div>
+                <div class="accordion-body">
+                  <input type="text" class="w-100" id="inputParola" />
+                </div>
               </div>
             </div>
           </div>
           <!--Accordion End -->
+          <!-- Reset Filter -->
+          <button class="reset shadow">Reset</button>
         </div>
         <div class="col-12 col-lg-9 d-flex flex-wrap" id="cardWrapper"></div>
       </div>

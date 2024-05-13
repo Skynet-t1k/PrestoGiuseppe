@@ -92,6 +92,10 @@ const swiper = new Swiper('.swiper', {
       slideShadows: true,
     },
     loop: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
