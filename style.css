@@ -60,6 +60,10 @@ body {
   color: var(--BalancedGreen);
 }
 
+.vh-75{
+  height: 75vh;
+}
+
 /* navbar */
 .nav-link{
   color:var(--ElectricBlue);
@@ -218,20 +222,30 @@ body {
 .accordion-button{
   background-color: var(--SlateGray);
   color: var(--VibrantOrange);
+  font-size: 1.3rem;
 }
-
 .accordion-button:not(.collapsed){
   background-color: var(--SlateGray);
   color: var(--VibrantOrange);
+  box-shadow: none;
 }
-
-.accordion-body{
-  background-color: var(--SlateGray);
-  color: var(--OptimisticYellow);
+.accordion-button:focus{
+  box-shadow: none;
 }
-
 .accordion-button::after {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff5722'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.accordion {
+  --bs-accordion-color: var(--OptimisticYellow);
+  --bs-accordion-bg: var(--SlateGray);
+  --bs-accordion-border-color: var(--VibrantOrange);
+  --bs-accordion-border-width: 2px;
+  --bs-accordion-btn-icon-width: 1.5rem;
+}
+
+.navAnnunci{
+  background-color: rgb(45, 45, 45) !important;
 }
 
 .card-annunci {
@@ -266,8 +280,58 @@ body {
   padding: 0px;
 }
 
+.reset:hover{
+  animation: burning-effect 2s infinite;
+}
+
 .reset:active {
   transform: scale(0.95);
+}
+
+/* About US */
+.cerchio{
+  height: 500px;
+  width: 500px;
+  border: 3px solid var(--VibrantOrange);
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cerchiointerno{
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border: 3px solid var(--VibrantOrange);
+  border-radius: 50%;
+  background-color: var(--OptimisticYellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+
+}
+
+.fotocerchio{
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  border: 3px solid var(--VibrantOrange);
+  background-color: var(--OptimisticYellow);
+  border-radius: 50%;
+  z-index: 1;
+  top: 85%;
+  
+}
+
+.flip-card{
+  height: 600px;
+  width: 400px;
+  border: 3px solid var(--VibrantOrange);
+
 }
 
 

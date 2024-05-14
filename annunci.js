@@ -89,6 +89,7 @@ creaCategFiltri(uniqueCategories);
 // Occhio Cattura button solo dopo averli creati
 let allbuttons = document.querySelectorAll('.form-check-input');
   allbuttons.forEach((button)=> button.addEventListener('click', ()=>{
+    setPrice();
     globalFilter();
 //  filtraPerCateg(button.id);
     }));
@@ -103,12 +104,15 @@ inputPrezzo.addEventListener('input', ()=>{
   globalFilter();
 });
 //set max price
-let prezzi = data.map((dato)=> +dato.price);
+function setPrice(){
+let prezzi = filtraPerCateg(data).map((dato)=> +dato.price);
 prezzi.sort((a, b)=> a - b);
 let maxPrice = Math.ceil(prezzi.pop());
 inputPrezzo.max = maxPrice;
 inputPrezzo.value = maxPrice;
 displayPrice.innerHTML = maxPrice;
+};
+setPrice();
 // filtro parola chiave
 let inputParola = document.querySelector('#inputParola');
 inputParola.addEventListener('input', ()=>{
@@ -119,10 +123,8 @@ let allCateg = document.querySelector('#all');
 let reset = document.querySelector('.reset');
 reset.addEventListener('click', ()=>{
   allCateg.checked = true;
-  inputPrezzo.max = maxPrice;
-  inputPrezzo.value = maxPrice;
-  displayPrice.innerHTML = maxPrice;
   inputParola.value = '';
+  setPrice();
   mostrAnnunci(data);
 });
 });
