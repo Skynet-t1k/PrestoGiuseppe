@@ -301,7 +301,6 @@ body {
 }
 
 .cerchiointerno{
-  position: absolute;
   height: 150px;
   width: 150px;
   border: 3px solid var(--VibrantOrange);
@@ -312,6 +311,7 @@ body {
   align-items: center;
   cursor: pointer;
   z-index: 2;
+  
 
 }
 
@@ -323,15 +323,60 @@ body {
   background-color: var(--OptimisticYellow);
   border-radius: 50%;
   z-index: 1;
-  top: 85%;
+  transition: 0.5s;
+  cursor: pointer;
   
 }
 
 .flip-card{
   height: 600px;
   width: 400px;
-  border: 3px solid var(--VibrantOrange);
+}
 
+.flip-card:hover > .innerflip{
+  transform: rotateY(180deg);
+
+}
+
+.innerflip{
+  height: 100%;
+  width: 100%;
+  border: 3px solid var(--VibrantOrange);
+  border-radius: 20px;
+  transition: 0.5s;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.faceflip{
+  height: 600px;
+  width: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  position: absolute;
+  backface-visibility: hidden;
+
+}
+
+.backflip{ 
+  height: 600px;
+  width: 400px;
+  position: absolute;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  text-align: center;
+  color: var(--VibrantOrange);
+  padding: 10px;
+
+}
+
+
+
+
+.round-img{
+  border-radius: 50%;
+ 
 }
 
 
@@ -347,9 +392,18 @@ body {
 }
 
 @media only screen and (max-width: 991px) {
-  h1 {
+  .h1-index {
     font-size: 1.5rem;
     margin-top: 50px;
+  }
+
+  .text-center-sm{
+    text-align: center;
+  }
+
+  .swiper {
+    width: 300px;
+    height: 450px;
   }
   
   .nav-link {
@@ -365,4 +419,21 @@ body {
   .card:hover{
     transform: none;
   }
+  .card-index{
+    width: 90%;
+    height: auto;
+    
+  }
+  
+    .swiper-button-next, .swiper-button-prev {
+      display: none;
+     
+  }
+
+  .h1-annunci{
+    font-size: 1.5rem;
+
+  }
+  
+
 }
