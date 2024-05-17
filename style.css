@@ -75,6 +75,12 @@ body {
 .navbar {
   background-color: rgba(55, 71, 79, 0.86) !important;
   
+  
+}
+
+.largescroll{
+  transform: scaleY(2);
+  transition: 0.5s;
 }
 
 .nav-link:hover{
@@ -170,11 +176,7 @@ body {
 
 }
 
-.card-index:hover{
-  transform: scale(1.15);
-  transition: 0.5s;
-  z-index: 4;
-}
+
 
 .positioned {
   position: relative;
@@ -185,6 +187,33 @@ body {
 
 .littlebt {
   width: 100%;
+  transition: 0.8s;
+ 
+}
+
+.card1{
+  translate: -600px 100px
+}
+.card1:hover{
+  translate: 0px 0px;
+  transform: scale(1.15) !important;
+  z-index: 4;
+}
+.card2{
+  translate: 0px 400px
+}
+.card2:hover{
+  translate: 0px 0px;
+  transform: scale(1.15) !important;
+  z-index: 4;
+}
+.card3{
+  translate: 600px 100px
+}
+.card3:hover{
+  translate: 0px 0px;
+  transform: scale(1.15) !important;
+  z-index: 4;
 }
 
 .increment{
@@ -419,13 +448,22 @@ body {
   .card:hover{
     transform: none;
   }
+  .card1{
+    translate: 0px 0px !important;
+  }
+  .card2{
+    translate: 0px 0px !important;
+  }
+  .card3{
+    translate: 0px 0px !important;
+  }
   .card-index{
     width: 90%;
     height: auto;
     
   }
   
-    .swiper-button-next, .swiper-button-prev {
+  .swiper-button-next, .swiper-button-prev {
       display: none;
      
   }
