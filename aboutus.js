@@ -2,6 +2,7 @@ let dragon = document.querySelector('.dragon');
 let f_dragon = document.querySelector('.f-dragon');
 let cerchiointerno = document.querySelector('.cerchiointerno');
 let cerchio = document.querySelector('.cerchio');
+const mediaQuery = window.matchMedia('(min-width: 1025px)');
 
 let draghi = [
     {nome: 'Gaiadros', descrizione: `Un drago robusto e possente, le sue scaglie ricordano la roccia e il muschio della terra.`, url: './media/terra.webp'},
@@ -10,19 +11,12 @@ let draghi = [
     {nome: 'Pyraxius', descrizione: `Un drago fiero e ardente, le sue scaglie vibranti e le sue corna affilate emanano un calore intenso come le fiamme del fuoco.`, url: './media/fuoco.webp'},
 ];
 
-
-
-
-
-
-
 draghi.forEach((drago)=>{
     let div = document.createElement('div');
     div.classList.add('fotocerchio');
     div.innerHTML = `
     <img src="${drago.url}" class="img-fluid round-img" alt=""/>`
     cerchio.appendChild(div);
-
 });
 
 
@@ -36,7 +30,11 @@ cerchiointerno.addEventListener('click', ()=>{
     if(check){
         fotocerchi.forEach((cerchio, i)=>{
         let angle = (360*i)/fotocerchi.length;
-        cerchio.style.transform = `rotate(${angle}deg) translate(250px) rotate(-${angle}deg)`;
+            if (mediaQuery.matches){
+            cerchio.style.transform = `rotate(${angle}deg) translate(250px) rotate(-${angle}deg)`;
+            }else{
+            cerchio.style.transform = `rotate(${angle}deg) translate(125px) rotate(-${angle}deg)`;
+            }
         });
         check=false;
     }else{

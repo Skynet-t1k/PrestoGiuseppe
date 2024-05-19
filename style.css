@@ -317,6 +317,12 @@ body {
   transform: scale(0.95);
 }
 
+
+.custom-sticky{
+  position: sticky;
+  top: 20px;
+}
+
 /* About US */
 .cerchio{
   height: 500px;
@@ -400,12 +406,8 @@ body {
 
 }
 
-
-
-
 .round-img{
-  border-radius: 50%;
- 
+ border-radius: 50%;
 }
 
 
@@ -472,6 +474,24 @@ body {
     font-size: 1.5rem;
 
   }
-  
 
+  .vh-75{
+    height: auto;
+  }
+  .custom-sticky{
+    position: static;
+  }
+  .cerchio{
+    height: 250px;
+    width: 250px;
+  }
+.cerchiointerno{
+  height: 75px;
+  width: 75px;
+  }
+
+.fotocerchio{
+  height: 75px;
+  width: 75px;
+ }
 }
