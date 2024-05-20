@@ -86,15 +86,12 @@ creaCategFiltri(uniqueCategories);
 
 
 // filtri radio buttons
-// Occhio Cattura button solo dopo averli creati
 let allbuttons = document.querySelectorAll('.form-check-input');
   allbuttons.forEach((button)=> button.addEventListener('click', ()=>{
     setPrice();
     globalFilter();
-//  filtraPerCateg(button.id);
-    }));
+}));
 
-// filtri radio buttons end
 // filtro prezzo
 let inputPrezzo = document.querySelector('#inputPrezzo');
 let displayPrice = document.querySelector('#displayPrice');
@@ -103,6 +100,7 @@ inputPrezzo.addEventListener('input', ()=>{
   displayPrice.innerHTML = inputPrezzo.value;
   globalFilter();
 });
+
 //set max price
 function setPrice(){
 let prezzi = filtraPerCateg(data).map((dato)=> +dato.price);
@@ -113,12 +111,12 @@ inputPrezzo.value = maxPrice;
 displayPrice.innerHTML = maxPrice;
 };
 setPrice();
+
 // filtro parola chiave
 let inputParola = document.querySelector('#inputParola');
 inputParola.addEventListener('input', ()=>{
   globalFilter();
 });
-
 let allCateg = document.querySelector('#all');
 let reset = document.querySelector('.reset');
 reset.addEventListener('click', ()=>{

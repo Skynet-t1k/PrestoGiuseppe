@@ -1,5 +1,4 @@
 
-
 let firstNumber = document.querySelector("#firstNumber");
 let secondNumber = document.querySelector("#secondNumber");
 let thirdNumber = document.querySelector("#thirdNumber");
@@ -7,25 +6,8 @@ let card1 = document.querySelector(".card1");
 let card2 = document.querySelector(".card2");
 let card3 = document.querySelector(".card3");
 let waitObserve = true;
-
-
-
-
-// window.addEventListener('scroll', ()=>{
-//     console.log(window.scrollY);
-//     if (window.scrollY >= 150){
-//         card1.style.transform = 'translate(600px, -80px)';
-//         card2.style.transform = 'translate(0px, -440px)';
-//         card3.style.transform = 'translate(-600px, -80px)';
-//     }else{
-//         card1.style.transform = 'translate(0px, 0px)';
-//         card2.style.transform = 'translate(0px, 0px)';
-//         card3.style.transform = 'translate(0px, 0px)';
-//     };
-    
-// });
-
 const mediaQuery = window.matchMedia('(min-width: 1025px)');
+
 
     function handleScroll() {
         if (mediaQuery.matches) {
@@ -103,7 +85,7 @@ recensioni.forEach((recensione)=>{
     </div>`
     swiperWrapper.appendChild(div);
 });
-// <i class="fa-solid fa-star"></i>
+
 let stars = document.querySelectorAll('.star');
 stars.forEach((star, index)=>{
     for (let i=1; i <= recensioni[index].rank; i++){
@@ -125,7 +107,6 @@ stars.forEach((star, index)=>{
 
 // Swiper
 const swiper = new Swiper('.swiper', {
-    // Optional parameters
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
@@ -142,7 +123,7 @@ const swiper = new Swiper('.swiper', {
         delay: 5000,
         disableOnInteraction: false,
       },
-    // Navigation arrows
+   
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

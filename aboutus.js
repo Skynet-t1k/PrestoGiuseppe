@@ -61,3 +61,11 @@ fotocerchi.forEach((cerchio, i)=>{
 });
 
 });
+
+let initWidth = window.innerWidth;
+let initHeight = window.innerHeight;
+window.addEventListener('resize', ()=> {
+    if (window.innerWidth !== initWidth || window.innerHeight !== initHeight) {
+        window.location.reload();
+    };
+});
